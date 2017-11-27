@@ -1,8 +1,10 @@
-package com.user.dao;
+package com.user.dao_past;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
+
+import com.user.dao.ConnectionMaker;
 
 public class NConnectionMaker implements ConnectionMaker {
 

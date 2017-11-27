@@ -17,7 +17,7 @@ public class UserDaoTest {
 		
 		@SuppressWarnings("resource")
 //		ApplicationContext context = new AnnotationConfigApplicationContext(DaoFactory.class);
-		ApplicationContext context = new GenericXmlApplicationContext("com/context/applicationContext.xml");
+		ApplicationContext context = new GenericXmlApplicationContext("com/context/context-datasource.xml");
 //		ApplicationContext context = new ClassPathXmlApplicationContext("applicationContext.xml", UserDaoTest.class);
 		
 		UserDao dao = context.getBean("userDao", UserDao.class);

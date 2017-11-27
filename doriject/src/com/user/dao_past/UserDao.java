@@ -1,26 +1,25 @@
-package com.user.dao;
+package com.user.dao_past;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
-import javax.sql.DataSource;
-
+import com.user.dao.ConnectionMaker;
 import com.user.domain.User;
 
 
 public class UserDao {
 	
-	private DataSource dataSource;
+	ConnectionMaker connectionMaker;
 	
 	
-	public void setDataSource(DataSource dataSource){
-		this.dataSource = dataSource;
+	public void setConnectionMaker(ConnectionMaker connectionMaker){
+		this.connectionMaker = connectionMaker;
 	}
 	
 	public void add(User user) throws ClassNotFoundException, SQLException {
-		Connection c = dataSource.getConnection();
+		Connection c = connectionMaker.makeConnection();
 		PreparedStatement ps = c.prepareStatement("INSERT INTO USERS(ID, NAME, PASSWORD)VALUES(?, ?, ?)");
 		ps.setString(1, user.getId());
 		ps.setString(2, user.getName());
@@ -34,7 +33,7 @@ public class UserDao {
 	}
 	
 	public User get(User user) throws ClassNotFoundException, SQLException {
-		Connection c = dataSource.getConnection();
+		Connection c = connectionMaker.makeConnection();
 		PreparedStatement ps = c.prepareStatement("SELECT * FROM USERS WHERE ID = ?");
 		ps.setString(1, "odori");
 		
@@ -56,7 +55,7 @@ public class UserDao {
 	
 	
 	public void delete(String id) throws ClassNotFoundException, SQLException {
-		Connection c = dataSource.getConnection();
+		Connection c = connectionMaker.makeConnection();
 		PreparedStatement ps = c.prepareStatement("DELETE FROM USERS WHERE ID = ?");
 		ps.setString(1, id);
 		ps.executeUpdate();
