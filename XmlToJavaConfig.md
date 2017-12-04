@@ -137,15 +137,15 @@ public class MyWebAppInitializer implements WebApplicationInitializer {
 2. classpath*:/egovframework/spring/context-*.xml
 3. classpath:/egovframework/spring/*.xml
 
- > JAVA code를 보게되면 MyWebAppInitializer(임의의 클래스명) 클래스를 만들어서 WebApplicationInitializer  인터페이스를 구현했다.  
- > 테스트한 결과 해당 클래스가 어느곳에 위치했든지 WebApplicationInitializer  인터페이스를 구현하게 되면   
- > TOMCAT이 구동되면서 재정의한 onStartup 메소드를 찾아간다.  
+ * JAVA code를 보게되면 MyWebAppInitializer(임의의 클래스명) 클래스를 만들어서 WebApplicationInitializer  인터페이스를 구현했다.  
+ * 테스트한 결과 해당 클래스가 어느곳에 위치했든지 WebApplicationInitializer  인터페이스를 구현하게 되면   
+ * TOMCAT이 구동되면서 재정의한 onStartup 메소드를 찾아간다.  
   
- > 위에서는 XML을 모두 걷어내지 않고 web.xml의 code만 JAVA code로 변경 했다.  
+ * 위에서는 XML을 모두 걷어내지 않고 web.xml의 code만 JAVA code로 변경 했다.  
   
- > ContextLoaderListener 에 해당하는 xml을 모두 JAVA code로 변경하게 되면  
- > XmlWebApplicationContext 를 대체하는 AnnotationApplicationContext 를 사용해서   
- > JAVA code로 변경된 설정파일을 Annotation 으로 지정해 주면 된다.  
+ * ContextLoaderListener 에 해당하는 xml을 모두 JAVA code로 변경하게 되면  
+ * XmlWebApplicationContext 를 대체하는 AnnotationApplicationContext 를 사용해서   
+ * JAVA code로 변경된 설정파일을 Annotation 으로 지정해 주면 된다.  
 
 
 
