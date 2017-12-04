@@ -62,9 +62,9 @@
 	}
     }
     
-> 실제위치
-> 프로젝트명 osp_sdn
-> src>egovframework>spring>context-***.xml  여러개있음
+ > 실제위치 <
+ > 프로젝트명 osp_sdn <
+ > src>egovframework>spring>context-***.xml  여러개있음 <
 
 ### ROOT_CONFIG_LOCATION 경로 지정 방법
 
