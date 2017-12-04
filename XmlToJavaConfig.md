@@ -2,16 +2,15 @@
 
 https://docs.spring.io/autorepo/docs/spring/4.0.3.RELEASE/javadoc-api/org/springframework/web/WebApplicationInitializer.html
 
-서블릿 API 버전 3.0을 채택 함으로써 **web.xml 파일은 선택 사항**이되었으며 이제 Java를 사용하여 DispatcherServlet 을 구성 할 수 있다 .
-**WebApplicationInitializer**를 구현하는 서블릿을 등록 할 수 있습니다 
+서블릿 API 버전 3.0을 채택 함으로써 **web.xml 파일은 선택 사항**이되었으며 이제 Java를 사용하여 DispatcherServlet 을 구성 할 수 있다 .  
+**WebApplicationInitializer**를 구현하는 서블릿을 등록 할 수 있다.  
 
-이렇게 web.xml을 이용하지 않고 자바빈 스타일을 이용함으로써 얻는 **장점**은 무엇일까?
-가장 큰 이점은 서버가 구동되거나, 어플리케이션이 초기화될 때 뭔가 작업을 할 수 있다는 것이다(쉽게 말하면 어플리케이션의 Bootstrap 역할).
+이렇게 web.xml을 이용하지 않고 자바빈 스타일을 이용함으로써 얻는 **장점**은 무엇일까?  
+가장 큰 이점은 서버가 구동되거나, 어플리케이션이 초기화될 때 뭔가 작업을 할 수 있다는 것이다(쉽게 말하면 어플리케이션의 Bootstrap 역할).  
 
-
-## spring xml 에서 java config 로 변경 
 
 #### 아래는 실제 XML에서 JAVA CODE로 변경된 부분만 정리함.
+----
 ## XML
 ~~~
 <?xml version="1.0" encoding="UTF-8"?>
@@ -97,8 +96,6 @@ public class MyWebAppInitializer implements WebApplicationInitializer {
   
   ServletRegistration.Dynamic dispatcher = servletContext.addServlet("dispatcher", new DispatcherServlet());
       
-  System.out.println("##@@@onStartup!!!###");  
-    
   dispatcher.setLoadOnStartup(1);
   dispatcher.setInitParameter("contextConfigLocation", CONFIG_LOCATION);
   dispatcher.addMapping("*.do");
