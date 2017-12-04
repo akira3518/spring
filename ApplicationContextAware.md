@@ -41,3 +41,10 @@ ApplicationContextAware Interface 구현하고 setApplicationContext(Application
 
 출처 : http://javaslave.tistory.com/50
 
+## 테스트
+ > 테스트한 해당 프로젝트에   
+ > ContextLoader로 설정된 ApplicationContext 와  
+ > DispatcherServletContext 가 설정되어 있었음.  
+
+ > Tomcat 구동시  
+ > 해당 setApplicationContext() 메소드를 두번 호출함.  
