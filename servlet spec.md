@@ -1,3 +1,5 @@
+# Servlet spec
+
 | Servlet Spec | JSP Spec | Apache Tomcat Version | Supported Java Versions |
 | 4.0          | 2.3      | 9.0.x                 | 8 and later             |
 | 3.1          | 2.3      | 8.5.x                 | 7 and later             |
@@ -7,6 +9,6 @@
 | 2.4          | 2.0      | 5.0.x (archived)      | 1.4 and later           |
 | 2.3          | 1.2      | 4.1.x (archived)      | 1.3 and later           |
 
-
+[Table caption, works as a reference][section-mmd-tables-table1] 
 [Apache tomcat servlet spec](http://tomcat.apache.org/whichversion.html)
 
