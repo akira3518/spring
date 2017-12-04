@@ -1,5 +1,3 @@
-# XML설정파일에서 JAVA CONFIG로의 변경
-
 ## XML설정파일에서 JAVA CONFIG로의 변경 ISSUE
 
 
@@ -51,12 +49,12 @@ public class ApplicationConfig extends WebMvcConfigurerAdapter {
  > 하지만 **spring 5.0**에서는  
  > **WebMvcConfiurer** 를 제공하지 않는다.  
  
- > 이것은 **Java 8**이 WebMvcConfigurerAdapater클래스 의 기능을 다루는 인터페이스에 기본 메소드를 도입했기 때문이다. 
- > 만약 그래도 사용하고자 한다면 Spring 5부터는 WebMvcConfigurer 인터페이스를 구현할 필요가 있다.
+ > 이것은 **Java 8**이 WebMvcConfigurerAdapater클래스 의 기능을 다루는 인터페이스에 기본 메소드를 도입했기 때문이다.   
+ > 만약 그래도 사용하고자 한다면 Spring 5부터는 WebMvcConfigurer 인터페이스를 구현할 필요가 있다.  
 
- > 아래문서를 참고하면 WebMvcConfigurerAdapater클래스는 spring5.0에서는 더이상 사용되지 않는다고 나와있음.
+ > 아래문서를 참고하면 WebMvcConfigurerAdapater클래스는 spring5.0에서는 더이상 사용되지 않는다고 나와있음.  
  > 버전UP시 문제의 소지가 있음.
-syntax: [Spring docs WebMvcConfigurerAdapater클래스](https://docs.spring.io/spring/docs/current/javadoc-api/org/springframework/web/servlet/config/annotation/WebMvcConfigurerAdapter.html)
+[Spring docs WebMvcConfigurerAdapater클래스](https://docs.spring.io/spring/docs/current/javadoc-api/org/springframework/web/servlet/config/annotation/WebMvcConfigurerAdapter.html)
 
 
 ~~~
@@ -104,26 +102,3 @@ public class MyWebAppInitializer implements WebApplicationInitializer {
 }
  ~~~
     
-
-
-### ROOT_CONFIG_LOCATION 경로 지정 방법
- > 실제위치  
- > src>egovframework>spring>context-***.xml
- * classpath:/egovframework/spring/context-*.xml
- * classpath*:/egovframework/spring/context-*.xml
- * classpath:/egovframework/spring/*.xml
-
- > JAVA code를 보게되면 MyWebAppInitializer(임의의 클래스명) 클래스를 만들어서 **WebApplicationInitializer 인터페이스**를 구현했다.  
- > 테스트한 결과 해당 클래스가 어느곳에 위치했든지 **WebApplicationInitializer 인터페이스**를 구현하게 되면   
- > TOMCAT이 구동되면서 재정의한 **onStartup** 메소드를 찾아간다.  
-  
- > 위에서는 XML을 모두 걷어내지 않고 web.xml의 code만 JAVA code로 변경 했다.  
-  
- > **ContextLoaderListener** 에 해당하는 xml을 모두 JAVA code로 변경하게 되면  
- > **XmlWebApplicationContext** 를 **AnnotationApplicationContext** 로 변경하고  
- > JAVA code로 변경된 설정파일을 **Annotation** 으로 지정해 주면 된다.  
-
-
-
-
-
