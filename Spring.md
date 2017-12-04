@@ -13,6 +13,19 @@ ContextLoaderListener 가 하는 역할
 
 https://docs.spring.io/autorepo/docs/spring/4.0.3.RELEASE/javadoc-api/org/springframework/web/WebApplicationInitializer.html
 
+### DispatcherServlet
+기본적으로 **DispatcherServlet** 은 모든 Spring MVC 애플리케이션 의 진입 점이다 . 
+이것의 **목적**은 HTTP 요청 을 가로 챈 다음 HTTP 요청을 처리하는 방법을 알 수있는 올바른 구성 요소에 요청을 전달하는 것이다.
+레거시 Spring 프로젝트 를 다루는 경우 XML 구성 을 찾는 것이 일반적 이며 
+Spring 3.1 까지는 DispatcherServlet 을 구성하는 유일한 방법  은 WEB-INF / web.xml 파일 을 사용하는 것이었다.
+
+서블릿 API 버전 3.0을 채택 함으로써 **web.xml 파일은 선택 사항**이되었으며 이제 Java를 사용하여 DispatcherServlet 을 구성 할 수 있다 .
+**WebApplicationInitializer**를 구현하는 서블릿을 등록 할 수 있습니다 
+
+이렇게 web.xml을 이용하지 않고 자바빈 스타일을 이용함으로써 얻는 **장점**은 무엇일까?
+가장 큰 이점은 서버가 구동되거나, 어플리케이션이 초기화될 때 뭔가 작업을 할 수 있다는 것이다(쉽게 말하면 어플리케이션의 Bootstrap 역할).
+
+
 ## spring xml 에서 java config 로 변경 
 
 
