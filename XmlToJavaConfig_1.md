@@ -2,12 +2,20 @@
 
 https://docs.spring.io/autorepo/docs/spring/4.0.3.RELEASE/javadoc-api/org/springframework/web/WebApplicationInitializer.html
 
-서블릿 API 버전 3.0을 채택 함으로써 **web.xml 파일은 선택 사항**이되었으며 이제 Java를 사용하여 DispatcherServlet 을 구성 할 수 있다 .  
+서블릿 API 버전 3.0을 채택 함으로써 **web.xml 파일은 선택 사항**이되었으며
+이제 **Java를 사용하여 DispatcherServlet을 구성** 할 수 있다 .  
 **WebApplicationInitializer**를 구현하는 서블릿을 등록 할 수 있다.  
 
-이렇게 web.xml을 이용하지 않고 자바빈 스타일을 이용함으로써 얻는 **장점**은 무엇일까?  
-가장 큰 이점은 서버가 구동되거나, 어플리케이션이 초기화될 때 뭔가 작업을 할 수 있다는 것이다(쉽게 말하면 어플리케이션의 Bootstrap 역할).  
+ > JAVA code로 변경하더라도 web.xml과 병행해서 사용할 수 있다.
+ > 하지만 서블릿은 3.0 이상이어야 한다.
 
+### web.xml을 이용하지 않고 자바빈 스타일을 이용함으로써 얻는 **장점**은 무엇일까?  
+ * 가장 큰 이점은 서버가 구동되거나, 어플리케이션이 초기화될 때 뭔가 작업을 할 수 있다는 것이다(쉽게 말하면 어플리케이션의 Bootstrap 역할).  
+ * 설정 파일을 따로 유지할 필요가 없다. 그냥 자바 클래스이다. 찾기 쉽다.
+ * 보다 명료하다. 어떤 것들이 빈으로 만들어지는지 파악하기 쉽다.
+ * IDE의 자동완성 기능을 사용할 수 있다. 자바 코드이기 때문이다. 그래서 작성과 수정이 빠르다.
+ * 어플리케이션 로직과 설정 코드를 동일한 언어로 만들 수 있다. 한 언어만 쓰는게 간편하니 좋다.
+ * 설정 코드에 break point 를 걸어서 디버깅할 수 있다.
 
 
 #### 아래는 실제 XML에서 JAVA CODE로 변경된 부분만 정리함.
