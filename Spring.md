@@ -12,18 +12,18 @@
 
 <p>XML</p>
 
-<context-param>
-      <param-name>contextConfigLocation</param-name>
+    <context-param>
+        <param-name>contextConfigLocation</param-name>
       <param-value>
            /WEB-INF/mars-ibatis.xml 
            /WEB-INF/mars-service.xml 
       </param-value>
-</context-param>
+    </context-param>
 
-<listener>
+    <listener>
         <listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
-</listener>
-<servlet>
+    </listener>
+    <servlet>
 	<servlet-name>action</servlet-name>
 	<servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
 	<init-param>
@@ -31,19 +31,19 @@
 		<param-value>/WEB-INF/config/egovframework/springmvc/dispatcher-servlet.xml</param-value>
 	</init-param>
 	<load-on-startup>1</load-on-startup>
-</servlet>
-<servlet-mapping>
+    </servlet>
+    <servlet-mapping>
 	<servlet-name>action</servlet-name>
 	<url-pattern>*.do</url-pattern>
-</servlet-mapping>
-<servlet-mapping>
+    </servlet-mapping>
+    <servlet-mapping>
 	<servlet-name>action</servlet-name>
 	<url-pattern>*.json</url-pattern>
-</servlet-mapping>
+    </servlet-mapping>
 
 <p>JAVA</p>
 
-public class MyWebAppInitializer implements WebApplicationInitializer {
+    public class MyWebAppInitializer implements WebApplicationInitializer {
 
 	private static final String ROOT_CONFIG_LOCATION = "classpath*:/egovframework/spring/context-*.xml";
 	private static final String CONFIG_LOCATION = "/WEB-INF/config/egovframework/springmvc/dispatcher-servlet.xml";
@@ -67,6 +67,6 @@ public class MyWebAppInitializer implements WebApplicationInitializer {
 		context.setConfigLocation(ROOT_CONFIG_LOCATION);
 		return context;
 	}
-}
+    }
 
 
