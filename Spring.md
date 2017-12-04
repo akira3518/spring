@@ -1,13 +1,6 @@
 <h1> 마크다운 메모와 위키와 책 </h1>
-<p> 마크다운은 다음과 같은 장점이 있습니다.</p>
-<ul>
-	<li> 문법이 단순하여 배우기 쉽고 쓰기도 쉽습니다. </li>
-    <li> html 문서로 변환되지 않아도 그 자체로 충분히 읽을 수 있습니다. </li>
-    <li> 다양한 도구들을 이용해 손쉽게 html 문서로 변환될 수 있습니다 </li>
-</ul>
 
-
-<h1> spring xml - java </h1>
+<h1> spring xml 에서 java config 로 변경 </h1>
 
 
 <p>XML</p>
@@ -78,3 +71,14 @@
 1. classpath:/egovframework/spring/context-*.xml
 2. classpath*:/egovframework/spring/context-*.xml
 3. classpath:/egovframework/spring/*.xml
+
+<p> 마크다운은 다음과 같은 장점이 있습니다.</p>
+<ul>
+	<li> 문법이 단순하여 배우기 쉽고 쓰기도 쉽습니다. </li>
+    <li> html 문서로 변환되지 않아도 그 자체로 충분히 읽을 수 있습니다. </li>
+    <li> 다양한 도구들을 이용해 손쉽게 html 문서로 변환될 수 있습니다 </li>
+</ul>
+
+
+
+
