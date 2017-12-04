@@ -1,9 +1,9 @@
-<h1> 마크다운 메모와 위키와 책 </h1>
+# 마크다운 메모와 위키와 책 
 
-<h1> spring xml 에서 java config 로 변경 </h1>
+## spring xml 에서 java config 로 변경 
 
 
-<p>XML</p>
+### XML
 
     <context-param>
         <param-name>contextConfigLocation</param-name>
@@ -34,7 +34,7 @@
 	<url-pattern>*.json</url-pattern>
     </servlet-mapping>
 
-<p>JAVA</p>
+### JAVA
 
     public class MyWebAppInitializer implements WebApplicationInitializer {
 
@@ -66,18 +66,16 @@
 > 프로젝트명 osp_sdn
 > src>egovframework>spring>context-***.xml  여러개있음
 
-<p>ROOT_CONFIG_LOCATION 경로 지정 방법</p>
+### ROOT_CONFIG_LOCATION 경로 지정 방법
 
 1. classpath:/egovframework/spring/context-*.xml
 2. classpath*:/egovframework/spring/context-*.xml
 3. classpath:/egovframework/spring/*.xml
 
-<p> 마크다운은 다음과 같은 장점이 있습니다.</p>
-<ul>
-	<li> 문법이 단순하여 배우기 쉽고 쓰기도 쉽습니다. </li>
-    <li> html 문서로 변환되지 않아도 그 자체로 충분히 읽을 수 있습니다. </li>
-    <li> 다양한 도구들을 이용해 손쉽게 html 문서로 변환될 수 있습니다 </li>
-</ul>
+## 마크다운은 다음과 같은 장점이 있습니다.
+ * 문법이 단순하여 배우기 쉽고 쓰기도 쉽습니다.
+ * html 문서로 변환되지 않아도 그 자체로 충분히 읽을 수 있습니다.
+ * 다양한 도구들을 이용해 손쉽게 html 문서로 변환될 수 있습니다.
 
 
 
