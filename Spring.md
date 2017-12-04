@@ -1,4 +1,17 @@
-# 마크다운 메모와 위키와 책 
+# 스프링 정리
+
+> 스프링 컨텍스트 는 루트와 자식컨텍스트로 나눠진다.  
+> 전통적인 XML 기반 접근 방식  
+> 웹 응용 프로그램을 작성하는 대부분의 Spring 사용자는 Spring(DispatcherServlet)을 등록해야한다.  
+> WEB-INF/web.xml  
+
+ContextLoaderListener 를 만드는 이유
+ContextLoaderListener 가 하는 역할
+
+> ContextLoaderListener 에 해당하는 부분이 root context 가 되고  
+> DispatcherServlet 에 해당하는 부분이 child context 가 된다  
+
+https://docs.spring.io/autorepo/docs/spring/4.0.3.RELEASE/javadoc-api/org/springframework/web/WebApplicationInitializer.html
 
 ## spring xml 에서 java config 로 변경 
 
@@ -72,10 +85,9 @@
 2. classpath*:/egovframework/spring/context-*.xml
 3. classpath:/egovframework/spring/*.xml
 
-## 마크다운은 다음과 같은 장점이 있습니다.
- * 문법이 단순하여 배우기 쉽고 쓰기도 쉽습니다.
- * html 문서로 변환되지 않아도 그 자체로 충분히 읽을 수 있습니다.
- * 다양한 도구들을 이용해 손쉽게 html 문서로 변환될 수 있습니다.
+
+
+
 
 
 
