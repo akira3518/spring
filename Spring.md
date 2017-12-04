@@ -69,11 +69,11 @@
 	}
     }
     
-해당위치
-프로젝트명 osp_sdn
-    src>egovframework>spring>context-***.xml  여러개있음
+> 실제위치
+> 프로젝트명 osp_sdn
+> src>egovframework>spring>context-***.xml  여러개있음
 
 <p>경로 지정 방법</p>
-*ROOT_CONFIG_LOCATION 
-*classpath:/egovframework/spring/context-*.xml
-*classpath*:/egovframework/spring/context-*.xml
+* ROOT_CONFIG_LOCATION 
+* classpath:/egovframework/spring/context-*.xml
+* classpath*:/egovframework/spring/context-*.xml
