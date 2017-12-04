@@ -1,6 +1,7 @@
 # Servlet spec
 
 | Servlet Spec | JSP Spec | Apache Tomcat Version | Supported Java Versions |
+| :----------- | :------: | --------------------: | ----------------------: |
 | 4.0          | 2.3      | 9.0.x                 | 8 and later             |
 | 3.1          | 2.3      | 8.5.x                 | 7 and later             |
 | 3.1          | 2.3      | 8.0.x (superseded)    | 7 and later             |
