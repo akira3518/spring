@@ -119,7 +119,16 @@
     
 
 # ContextLoaderListener
+계층별로 나눈 xml 설정파일이 있다고 가정할 때 web.xml에서 모두 load되도록 등록할 때 사용.
+서블릿이전에 서블릿 초기화하는 용도록 쓰이며 **contextConfigLocation** 라는 파라미터를 써서, 
+Context Loader가 load할 xml설정파일을 등록할 수 있다.
 
+ > web.xml에 `<context-param>` 문장이 빠지게 되면 default로,
+ > /WEB-INF/applicationContext.xml (spring 설정파일) 을 쓰게 된다.
+ > 경로를 잘못 입력한 경우 **/WEB-INF/applicationContext.xml 을 찾을 수 없다는 오류메세지**를 볼 수 있을 것이다.
+ 
+ ### 예시1
+~~~
  	<context-param>
 		<param-name>contextConfigLocation</param-name>
 		<param-value>classpath*:egovframework/spring/context-*.xml</param-value>
@@ -127,13 +136,26 @@
 	<listener>
 		<listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
 	</listener>
+~~~	
+### 예시2
+
+ 	<context-param>
+		<param-name>contextConfigLocation</param-name>
+		<param-value>
+			/WEB-INF/context/context-datasoruce.xml
+			/WEB-INF/context/context-aspects.xml
+		</param-value>
+	</context-param>
+	<listener>
+		<listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
+	</listener>
 	
 # DispatcherServlet
 
- > 기본적으로 **DispatcherServlet** 은 모든 Spring MVC 애플리케이션 의 진입 점이다 . 
- > 이것의 **목적**은 HTTP 요청 을 가로 챈 다음 HTTP 요청을 처리하는 방법을 알 수있는 올바른 구성 요소에 요청을 전달하는 것이다.
- > 레거시 Spring 프로젝트 를 다루는 경우 XML 구성 을 찾는 것이 일반적 이며 
- > Spring 3.1 까지는 DispatcherServlet 을 구성하는 유일한 방법  은 WEB-INF / web.xml 파일 을 사용하는 것이었다.
+ > 기본적으로 **DispatcherServlet** 은 모든 Spring MVC 애플리케이션 의 진입 점이다 .   
+ > 이것의 **목적**은 HTTP 요청 을 가로 챈 다음 HTTP 요청을 처리하는 방법을 알 수있는 올바른 구성 요소에 요청을 전달하는 것이다.  
+ > 레거시 Spring 프로젝트 를 다루는 경우 XML 구성 을 찾는 것이 일반적 이며   
+ > Spring 3.1 까지는 DispatcherServlet 을 구성하는 유일한 방법  은 WEB-INF / web.xml 파일 을 사용하는 것이었다.  
 
     <servlet>
 	<servlet-name>action</servlet-name>
